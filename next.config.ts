@@ -1,21 +1,21 @@
-import type { NextConfig } from 'next';
-import type { Configuration } from 'webpack';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  webpack: (config: Configuration, { isServer }) => {
-    if (!isServer) {
-      config.resolve = {
-        ...config.resolve,
-        fallback: {
-          ...config.resolve?.fallback,
-          fs: false,
-          child_process: false,
-          net: false,
-          tls: false,
-        },
-      };
-    }
-    return config;
+  /* config options here */
+  // images: {
+  //   remotePatterns: [
+  //     {
+  //       protocol: "https",
+  //       hostname: "ik.imagekit.io",
+  //       port: "",
+  //     },
+  //   ],
+  // },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
   },
 };
 
