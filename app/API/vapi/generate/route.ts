@@ -29,12 +29,14 @@ try{
     
        });
        
+       console.log(questions)
+       
        const interview = {
             type: type,
             role: role,
             level: level,
             techstack: techstack.split(","),
-            questions: JSON.parse(questions),
+            questions: JSON.parse(),
             userId: userid,
             finalized: true,
             coverImage: getRandomInterviewCover(),
